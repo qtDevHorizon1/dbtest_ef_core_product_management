@@ -1,0 +1,12 @@
+D:\ado_framework\obj\Debug\AdoFramework.csproj.AssemblyReference.cache
+D:\ado_framework\obj\Debug\AdoFramework.csproj.CoreCompileInputs.cache
+D:\ado_framework\bin\Debug\AdoFramework.exe.config
+D:\ado_framework\bin\Debug\AdoFramework.exe
+D:\ado_framework\bin\Debug\AdoFramework.pdb
+D:\ado_framework\obj\Debug\AdoFramework.exe
+D:\ado_framework\obj\Debug\AdoFramework.pdb
+D:\ef_framework\obj\Debug\AdoFramework.csproj.AssemblyReference.cache
+D:\ef_framework\obj\Debug\AdoFramework.exe.config
+D:\ef_framework\obj\Debug\AdoFramework.csproj.CoreCompileInputs.cache
+D:\ef_framework\obj\Debug\AdoFramework.exe
+D:\ef_framework\obj\Debug\AdoFramework.pdb

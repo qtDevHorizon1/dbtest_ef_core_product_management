@@ -1,0 +1,13 @@
+D:\ef_framework\bin\Debug\EFFramework.exe.config
+D:\ef_framework\bin\Debug\EFFramework.exe
+D:\ef_framework\bin\Debug\EFFramework.pdb
+D:\ef_framework\bin\Debug\EntityFramework.dll
+D:\ef_framework\bin\Debug\EntityFramework.SqlServer.dll
+D:\ef_framework\bin\Debug\EntityFramework.xml
+D:\ef_framework\bin\Debug\EntityFramework.SqlServer.xml
+D:\ef_framework\obj\Debug\EFFramework.csproj.AssemblyReference.cache
+D:\ef_framework\obj\Debug\EFFramework.csproj.CoreCompileInputs.cache
+D:\ef_framework\obj\Debug\EFFramew.40B066B0.Up2Date
+D:\ef_framework\obj\Debug\EFFramework.exe
+D:\ef_framework\obj\Debug\EFFramework.pdb
+D:\ef_framework\obj\Debug\EFFramework.exe.config
