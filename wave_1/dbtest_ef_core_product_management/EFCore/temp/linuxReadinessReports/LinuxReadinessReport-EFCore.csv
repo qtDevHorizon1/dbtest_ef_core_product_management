@@ -1,0 +1,10 @@
+ProjectName,FileName,DetectionType,DetectionItem,Description,SeverityLevel,Recommendation
+EFCore,N/A,ExternalConnectivityConsiderations,ExternalServiceConnectivity,Detected feature HttpLibraryFeature. Project potentially connects to external services.,Low,Recommend verifying the external service connectivity for Linux.
+EFCore,N/A,WindowsSpecificConsiderations,FilePermission,Detected feature FileAccessControlFeature. Project contains APIs that can be used to modify file permissions.,Low,Recommend verifying file permissions.
+EFCore,N/A,WindowsSpecificConsiderations,Package,'EntityFramework.SqlServer-6.0.0-NUGET' is cross-platform incompatible.,High,No recommendation
+EFCore,N/A,WindowsSpecificConsiderations,Package,'Microsoft.CodeAnalysis.Workspaces-4.5.0-NUGET' is cross-platform compatibility unknown.,High,No recommendation
+EFCore,N/A,WindowsSpecificConsiderations,Package,'Microsoft.Extensions.Configuration.Abstractions-9.0.0-NUGET' is cross-platform incompatible.,High,No recommendation
+EFCore,N/A,WindowsSpecificConsiderations,Package,'Microsoft.Extensions.DependencyInjection.Abstractions-9.0.0-NUGET' is cross-platform incompatible.,High,No recommendation
+EFCore,N/A,WindowsSpecificConsiderations,Package,'Microsoft.Extensions.Primitives-9.0.0-NUGET' is cross-platform incompatible.,High,No recommendation
+EFCore,Program.cs,WindowsSpecificConsiderations,API,'System.IServiceProvider.GetRequiredService<T>()' of package 'Microsoft.Extensions.DependencyInjection.Abstractions-9.0.0-NUGET' is cross-platform incompatible.,High,No recommendation
+EFCore,Program.cs,WindowsSpecificConsiderations,API,'Microsoft.Extensions.DependencyInjection.IServiceCollection.AddScoped<TService>()' of package 'Microsoft.Extensions.DependencyInjection.Abstractions-9.0.0-NUGET' is cross-platform incompatible.,High,No recommendation
