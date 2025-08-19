@@ -1,0 +1,3 @@
+ProjectName,FileName,DetectionType,DetectionItem,Description,SeverityLevel,Recommendation
+EFCore,N/A,ExternalConnectivityConsiderations,ExternalServiceConnectivity,Detected feature HttpLibraryFeature. Project potentially connects to external services.,Low,Recommend verifying the external service connectivity for Linux.
+EFCore,N/A,WindowsSpecificConsiderations,FilePermission,Detected feature FileAccessControlFeature. Project contains APIs that can be used to modify file permissions.,Low,Recommend verifying file permissions.

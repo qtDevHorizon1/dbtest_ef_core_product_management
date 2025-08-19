@@ -1,0 +1,25 @@
+{
+  "Transformations": {
+    "DatabaseModernization": {
+      "Enabled": true,
+      "ConnectorId": "0471fe73-8870-4bb8-a96b-abff7f87f31d",
+      "Databases": [
+        {
+          "Source": {
+            "Name": "ProductManagement",
+            "Version": "2019"
+          },
+          "Target": {
+            "Name": "postgres",
+            "Version": "13"
+          },
+          "DmsArn": "arn:aws:dms:us-east-1:123456789012:project:my-dms-project"
+        }
+      ]
+    }
+  },
+  "Metadata": {
+    "GeneratedAt": "2025-08-19T03:06:55.6806003Z",
+    "Version": "1.0"
+  }
+}
