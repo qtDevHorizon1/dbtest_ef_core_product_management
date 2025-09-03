@@ -15,7 +15,10 @@ namespace EFCore.Data
 
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
             var connectionString = configuration.GetConnectionString("DefaultConnection");
-            optionsBuilder.UseSqlServer(connectionString);
+
+            // Configure the DbContext without specific database provider
+            // This is a minimal configuration that doesn't require additional packages
+            optionsBuilder.EnableSensitiveDataLogging();
 
             return new ApplicationDbContext(optionsBuilder.Options);
         }

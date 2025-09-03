@@ -3,9 +3,9 @@ using EFCore.Models;
 
 namespace EFCore.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ProductDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public ProductDbContext(DbContextOptions<ProductDbContext> options)
             : base(options)
         {
         }
@@ -19,6 +19,16 @@ namespace EFCore.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            // Configure schema for all entities
+            modelBuilder.HasDefaultSchema("database-1_dbo");
+
+            // Configure table names
+            modelBuilder.Entity<Product>().ToTable("products");
+            modelBuilder.Entity<Category>().ToTable("categories");
+            modelBuilder.Entity<Supplier>().ToTable("suppliers");
+            modelBuilder.Entity<ProductHistory>().ToTable("producthistory");
+            modelBuilder.Entity<ProductStats>().ToTable("productstats");
 
             // Configure Category self-referencing relationship
             modelBuilder.Entity<Category>()

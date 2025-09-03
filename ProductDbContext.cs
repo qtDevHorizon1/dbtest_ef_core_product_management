@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using EFCore.Models;
 
-namespace EFCore.DataAccess
+namespace EFCore.DataAccess.Context
 {
     public class ProductDbContext : DbContext
     {

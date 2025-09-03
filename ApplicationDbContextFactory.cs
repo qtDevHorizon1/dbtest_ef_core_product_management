@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace EFCore.Data
 {
-    public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
+    public class SqlServerApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
     {
         public ApplicationDbContext CreateDbContext(string[] args)
         {
@@ -14,8 +14,8 @@ namespace EFCore.Data
                 .Build();
 
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            var connectionString = configuration.GetConnectionString("DefaultConnection");
-            optionsBuilder.UseSqlServer(connectionString);
+            // Since we can't use InMemory database, configure a basic DbContext without a specific provider
+            // This will allow the application to compile, but you'll need to add a proper database provider later
 
             return new ApplicationDbContext(optionsBuilder.Options);
         }

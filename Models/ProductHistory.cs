@@ -3,12 +3,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EFCore.Models
 {
-    [Table("ProductHistory")]
+    [Table("producthistory", Schema = "database-1_dbo")]
     public class ProductHistory
     {
         [Key]
+        [Column("historyid")]
         public int HistoryId { get; set; }
 
+        [Column("productid")]
         public int ProductId { get; set; }
 
         [ForeignKey("ProductId")]
@@ -16,20 +18,26 @@ namespace EFCore.Models
 
         [Required]
         [StringLength(10)]
+        [Column("action")]
         public string Action { get; set; }
 
-        [Column(TypeName = "decimal(18,2)")]
+        [Column("oldprice", TypeName = "decimal(18,2)")]
         public decimal? OldPrice { get; set; }
 
-        [Column(TypeName = "decimal(18,2)")]
+        [Column("newprice", TypeName = "decimal(18,2)")]
         public decimal? NewPrice { get; set; }
 
+        [Column("oldstock")]
         public int? OldStock { get; set; }
+
+        [Column("newstock")]
         public int? NewStock { get; set; }
 
+        [Column("actiondate")]
         public DateTime ActionDate { get; set; }
 
         [StringLength(100)]
+        [Column("modifiedby")]
         public string ModifiedBy { get; set; }
     }
 } 

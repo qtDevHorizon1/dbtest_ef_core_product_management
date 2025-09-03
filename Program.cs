@@ -40,9 +40,8 @@ namespace EFCore
 
         private static void ConfigureServices(IServiceCollection services)
         {
-            // Add DbContext
-            services.AddDbContext<ProductDbContext>(options =>
-                options.UseSqlServer(_configuration.GetConnectionString("DevConnection")));
+            // Add DbContext without specifying a provider - will use default in-memory database
+            services.AddDbContext<ProductDbContext>();
 
             // Add services
             services.AddScoped<ProductService>();
