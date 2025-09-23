@@ -20,6 +20,13 @@ namespace EFCore.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            // Set schema for all entities
+            modelBuilder.Entity<Product>().ToTable("products", "productmanagement_dbo");
+            modelBuilder.Entity<Category>().ToTable("categories", "productmanagement_dbo");
+            modelBuilder.Entity<Supplier>().ToTable("suppliers", "productmanagement_dbo");
+            modelBuilder.Entity<ProductHistory>().ToTable("producthistory", "productmanagement_dbo");
+            modelBuilder.Entity<ProductStats>().ToTable("productstats", "productmanagement_dbo");
+
             // Configure Category self-referencing relationship
             modelBuilder.Entity<Category>()
                 .HasOne(c => c.ParentCategory)
