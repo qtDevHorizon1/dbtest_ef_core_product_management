@@ -15,7 +15,7 @@ namespace EFCore.DataAccess
         {
             modelBuilder.Entity<Product>(entity =>
             {
-                entity.ToTable("Products");
+                entity.ToTable("products", "productmanagement_dbo");
                 entity.HasKey(p => p.ProductId);
 
                 entity.Property(p => p.ProductId)
