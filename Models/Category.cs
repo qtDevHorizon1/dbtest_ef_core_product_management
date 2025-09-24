@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EFCore.Models
 {
-    [Table("Categories")]
+    [Table("categories", Schema = "public")]
     public class Category
     {
         [Key]
