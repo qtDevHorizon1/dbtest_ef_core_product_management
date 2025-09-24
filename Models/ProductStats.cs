@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EFCore.Models
 {
-    [Table("ProductStats")]
+    [Table("productstats", Schema = "productmanagement_dbo")]
     public class ProductStats
     {
         [Key]
