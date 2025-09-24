@@ -4,45 +4,55 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EFCore.Models
 {
-    [Table("Products")]
+    [Table("products", Schema = "productmanagement_dbo")]
     public class Product
     {
         [Key]
+        [Column("productid")]
         public int ProductId { get; set; }
 
         [Required]
         [StringLength(100)]
+        [Column("name")]
         public string Name { get; set; }
 
         [StringLength(500)]
+        [Column("description")]
         public string Description { get; set; }
 
-        [Column(TypeName = "decimal(18,2)")]
+        [Column("price", TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
 
+        [Column("stockquantity")]
         public int StockQuantity { get; set; }
 
+        [Column("categoryid")]
         public int CategoryId { get; set; }
 
         [ForeignKey("CategoryId")]
         public Category Category { get; set; }
 
+        [Column("supplierid")]
         public int? SupplierId { get; set; }
 
         [ForeignKey("SupplierId")]
         public Supplier Supplier { get; set; }
 
         [StringLength(50)]
+        [Column("sku")]
         public string SKU { get; set; }
 
-        [Column(TypeName = "decimal(18,2)")]
+        [Column("weight", TypeName = "decimal(18,2)")]
         public decimal? Weight { get; set; }
 
         [StringLength(50)]
+        [Column("dimensions")]
         public string Dimensions { get; set; }
 
+        [Column("isdiscontinued")]
         public bool IsDiscontinued { get; set; }
 
+        [Column("reorderlevel")]
         public int ReorderLevel { get; set; }
 
         public DateTime CreatedDate { get; set; }
