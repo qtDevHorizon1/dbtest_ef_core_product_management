@@ -20,6 +20,13 @@ namespace EFCore.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            // Configure table names for PostgreSQL
+            modelBuilder.Entity<Product>().ToTable("products");
+            modelBuilder.Entity<Category>().ToTable("categories");
+            modelBuilder.Entity<Supplier>().ToTable("suppliers");
+            modelBuilder.Entity<ProductHistory>().ToTable("product_history");
+            modelBuilder.Entity<ProductStats>().ToTable("product_stats");
+
             // Configure Category self-referencing relationship
             modelBuilder.Entity<Category>()
                 .HasOne(c => c.ParentCategory)
