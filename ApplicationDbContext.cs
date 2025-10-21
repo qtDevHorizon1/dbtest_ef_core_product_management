@@ -3,9 +3,9 @@ using EFCore.Models;
 
 namespace EFCore.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class EFCoreApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public EFCoreApplicationDbContext(DbContextOptions<EFCoreApplicationDbContext> options)
             : base(options)
         {
         }
@@ -50,4 +50,4 @@ namespace EFCore.Data
             // ProductStats is now a standalone table, no relationship configuration needed
         }
     }
-} 
+}

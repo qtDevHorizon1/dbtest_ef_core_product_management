@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace EFCore.Data
 {
-    public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
+    public class DesignTimeApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
     {
         public ApplicationDbContext CreateDbContext(string[] args)
         {
@@ -20,4 +20,4 @@ namespace EFCore.Data
             return new ApplicationDbContext(optionsBuilder.Options);
         }
     }
-} 
+}

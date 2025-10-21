@@ -3,9 +3,9 @@ using EFCore.Models;
 
 namespace EFCore.DataAccess
 {
-    public class ProductDbContext : DbContext
+    public class ProductContext : DbContext
     {
-        public ProductDbContext(DbContextOptions<ProductDbContext> options) : base(options)
+        public ProductContext(DbContextOptions<ProductContext> options) : base(options)
         {
         }
 
@@ -35,4 +35,4 @@ namespace EFCore.DataAccess
             base.OnModelCreating(modelBuilder);
         }
     }
-} 
+}

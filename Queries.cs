@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EFCore.Data
 {
-    public static class Queries
+    public static class ProductQueries
     {
         // Get products with their category and supplier information
         public static async Task<List<Product>> GetProductsWithDetails(ApplicationDbContext context)
@@ -96,4 +96,4 @@ namespace EFCore.Data
                 .ToListAsync();
         }
     }
-} 
+}
